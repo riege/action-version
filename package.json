@@ -1,0 +1,25 @@
+{
+  "name": "action-version",
+  "version": "1.0.0",
+  "description": "A GitHub action to determine the version for build artifacts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riege/action-version.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riege/action-version/issues"
+  },
+  "homepage": "https://github.com/riege/action-version#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2"
+  }
+}

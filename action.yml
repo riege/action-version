@@ -1,0 +1,10 @@
+name: 'Version'
+description: 'Determine the version for the build artifacts'
+
+outputs:
+  version:
+    description: "The version string"
+
+runs:
+  using: "node12"
+  main: "index.js"

@@ -1,0 +1,24 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  action_outputs:
+    runs-on: ubuntu-latest
+    name: Test action
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - uses: ./
+        id: version
+      - run: |
+          export VERSION="${{ steps.version.outputs.version }}"
+          echo "$VERSION must match .+-.+-.+"
+          bash -c '[[ $VERSION =~ .+-.+-.+ ]]'
