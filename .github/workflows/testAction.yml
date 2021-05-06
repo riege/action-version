@@ -18,7 +18,24 @@ jobs:
       - run: npm test
       - uses: ./
         id: version
-      - run: |
-          export VERSION="${{ steps.version.outputs.version }}"
-          echo "$VERSION must match .+-.+-.+"
-          bash -c '[[ $VERSION =~ .+-.+-.+ ]]'
+      - name: Test outputs
+        run: |
+          export OUTPUT="${{ steps.version.outputs.version }}"
+          echo "version: $OUTPUT must match .+-.+-.+"
+          bash -c '[[ $OUTPUT =~ .+-.+-.+ ]]'
+
+          export OUTPUT="${{ steps.version.outputs.version-without-v }}"
+          echo "version-without-v: $OUTPUT must match .+-.+-.+"
+          bash -c '[[ $OUTPUT =~ .+-.+-.+ ]]'
+
+          export OUTPUT="${{ steps.version.outputs.major }}"
+          echo "major: $OUTPUT must not be empty"
+          test -n "$OUTPUT"
+
+          export OUTPUT="${{ steps.version.outputs.minor }}"
+          echo "minor: $OUTPUT must not be empty"
+          test -n "$OUTPUT"
+
+          export OUTPUT="${{ steps.version.outputs.patch }}"
+          echo "patch: $OUTPUT must not be empty"
+          test -n "$OUTPUT"

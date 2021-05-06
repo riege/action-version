@@ -4,6 +4,14 @@ description: 'Determine the version for the build artifacts'
 outputs:
   version:
     description: "The version string"
+  major:
+    description: "The major part of a semantic version"
+  minor:
+    description: "The minor part of a semantic version"
+  patch:
+    description: "The remainder (after major and minor) of a semantic version"
+  version-without-v:
+    description: "The version string, with a leading \"v\" removed for tags that resemble a version number"
 
 runs:
   using: "node12"
