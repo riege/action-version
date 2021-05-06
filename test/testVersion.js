@@ -1,3 +1,4 @@
+/*jshint loopfunc: true */
 let assert = require('assert');
 let version = require('../version');
 let testData = [
@@ -10,9 +11,9 @@ let testData = [
 ];
 
 describe('getVersion', function() {
-    for(let data of testData) {
+    for (let data of testData) {
         it(JSON.stringify(data), function() {
-            assert.strictEqual(version.get(data[0], data[1], data[2]), data[3])
+            assert.strictEqual(version.get(data[0], data[1], data[2]), data[3]);
         });
     }
 });

@@ -13,4 +13,4 @@ exports.get = function (ref, run, sha) {
     }
 
     return `${ref}-${run}-${sha}`;
-}
+};
