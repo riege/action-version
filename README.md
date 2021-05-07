@@ -27,7 +27,7 @@ jobs:
     name: Echo action's outputs
     steps:
     - id: version
-      uses: riege/action-version@v1.0
+      uses: riege/action-version@v1
     - run: |
         echo Version: ${{ steps.version.outputs.version }}
         echo Image tag: "${{ secrets.ACR_LOGIN_SERVER }}/my-container:${{ steps.version.outputs.version }}"
