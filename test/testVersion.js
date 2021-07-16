@@ -4,8 +4,8 @@ let version = require('../version');
 
 let testData = [
     ['refs/heads/main', '1', 'abcd', 'main-1-abcd', 'main', '1', 'abcd'],
-    ['refs/pull/1/merge', '2', 'abcd', 'pr-1-2-abcd', 'pr-1', '2', 'abcd'],
-    ['refs/pull/1/base', '2', 'abcd', 'pr-1-2-abcd', 'pr-1', '2', 'abcd'],
+    ['refs/pull/1/merge', '2', 'abcd', 'pr1-2-abcd', 'pr1', '2', 'abcd'],
+    ['refs/pull/1/base', '2', 'abcd', 'pr1-2-abcd', 'pr1', '2', 'abcd'],
     ['refs/tags/v1', '2', 'abcd', 'v1', '1', '', ''],
     ['refs/tags/1.0', '2', 'abcd', '1.0', '1', '0', ''],
     ['refs/tags/1.0.0', '2', 'abcd', '1.0.0', '1', '0', '0'],
@@ -20,7 +20,7 @@ let testDataWithoutV = [
     // do nothing for branches
     ['refs/heads/main', '1', 'abcd', 'main-1-abcd'],
     ['refs/heads/v100', '1', 'abcd', 'v100-1-abcd'],
-    ['refs/pull/1/merge', '2', 'abcd', 'pr-1-2-abcd'],
+    ['refs/pull/1/merge', '2', 'abcd', 'pr1-2-abcd'],
 
     // strip leading v from version numbers
     ['refs/tags/1.0.0', '2', 'abcd', '1.0.0'],

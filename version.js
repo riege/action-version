@@ -20,7 +20,7 @@ function fromTag(tag) {
 function fromRefRunSha(ref, run, sha) {
     sha = sha.substr(0, 8);
     if (ref.startsWith('refs/pull/')) {
-        ref = ref.replace(/^refs\/pull\/(\d+)\/.*/, 'pr-$1');
+        ref = ref.replace(/^refs\/pull\/(\d+)\/.*/, 'pr$1');
     } else {
         ref = ref.replace(/^refs\/heads\//, '');
     }

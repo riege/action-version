@@ -9,7 +9,7 @@ The general idea is to generate a unique version string from the job context tha
 | ------------ | ------- | ------- |
 | Git tag      | \<tagname\> | v1.3.2
 | Branch       | \<branchname\>-\<runnumber\>-\<sha\>  | main-9-f025368a |
-| Pull request | pr-\<prnumber\>-\<runnumber\>-\<sha\> | pr-9-1-89d735ed |
+| Pull request | pr\<prnumber\>-\<runnumber\>-\<sha\> | pr9-1-89d735ed |
 
 Tags are assumed to already satisfy these goals and are taken as-is. For other cases, the first part (branch name or PR number) tells whether two version can be compared, the second part (build number) allows to quickly tell versions apart, and the commit hash uniquely identifies the revision of the source that was build.
 
@@ -31,7 +31,7 @@ Tags are assumed to already satisfy these goals and are taken as-is. For other c
 | refs/tags/1.2.3.4| 9| a52f| 1.2.3.4| 1.2.3.4| 1| 2| 3.4|
 | refs/heads/main| 9| a52f| main-9-a52f| main-9-a52f| main| 9| a52f|
 | refs/heads/stable| 9| a52f| stable-9-a52f| stable-9-a52f| stable| 9| a52f|
-| refs/pull/1/merge| 9| a52f| pr-1-9-a52f| pr-1-9-a52f| pr-1| 9| a52f|
+| refs/pull/1/merge| 9| a52f| pr1-9-a52f| pr1-9-a52f| pr1| 9| a52f|
 
 ## Example Usage
 ```
