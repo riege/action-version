@@ -15,6 +15,9 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      # Since node_modules needs to be under version control, make sure the
+      # checked-in dependencies match those described in package.json
+      - run: git diff --exit-code
       - run: npm test
       - uses: ./
         id: version
