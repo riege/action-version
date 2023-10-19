@@ -10,10 +10,11 @@ jobs:
     name: Test action
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 12
-        uses: actions/setup-node@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 20
+          cache: 'npm'
       - run: npm ci
       # Since node_modules needs to be under version control, make sure the
       # checked-in dependencies match those described in package.json
