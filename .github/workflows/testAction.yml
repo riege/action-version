@@ -26,7 +26,7 @@ jobs:
     name: Run action and check output
     steps:
       - uses: actions/checkout@v4
-      - uses: ./
+      - uses: riege/action-version@v1.3.1
         id: version
       - name: Test outputs
         run: |
