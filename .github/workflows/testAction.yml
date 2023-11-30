@@ -5,9 +5,9 @@ on:
     branches: [ main ]
 
 jobs:
-  action_outputs:
+  build_and_test:
     runs-on: ubuntu-latest
-    name: Test action
+    name: Run unit tests
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
@@ -20,6 +20,12 @@ jobs:
       # checked-in dependencies match those described in package.json
       - run: git diff --exit-code
       - run: npm test
+
+  action_outputs:
+    runs-on: ubuntu-latest
+    name: Run action and check output
+    steps:
+      - uses: actions/checkout@v4
       - uses: ./
         id: version
       - name: Test outputs
