@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/riege/action-version#readme",
   "dependencies": {
-    "@actions/core": "1.11.0"
+    "@actions/core": "1.11.1"
   },
   "devDependencies": {
     "mocha": "10.7.3"
