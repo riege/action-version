@@ -20,7 +20,7 @@
     "@actions/core": "1.11.1"
   },
   "devDependencies": {
-    "mocha": "11.2.2"
+    "mocha": "11.3.0"
   },
   "jsHintOptions": {
     "version": 10
