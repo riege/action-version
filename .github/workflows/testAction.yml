@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Run unit tests
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Run action and check output
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./
         id: version
       - name: Test outputs
