@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/riege/action-version#readme",
   "dependencies": {
-    "@actions/core": "2.0.0",
-    "@actions/http-client": "^3.0.0",
-    "undici": "^7.16.0"
+    "@actions/core": "2.0.0"
   },
   "devDependencies": {
     "mocha": "11.7.5"
