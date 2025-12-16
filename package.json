@@ -4,7 +4,8 @@
   "description": "A GitHub action to determine the version for build artifacts.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "ncc build index.js -o dist"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,11 @@
   },
   "homepage": "https://github.com/riege/action-version#readme",
   "dependencies": {
-    "@actions/core": "1.11.1"
+    "@actions/core": "2.0.1"
   },
   "devDependencies": {
-    "mocha": "11.7.5"
+    "mocha": "11.7.5",
+    "@vercel/ncc": "0.38.4"
   },
   "jsHintOptions": {
     "version": 10
