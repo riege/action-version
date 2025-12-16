@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js 20
         uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: 20
           cache: 'npm'
       - run: npm ci
       # Since node_modules needs to be under version control, make sure the
@@ -29,7 +29,9 @@ jobs:
       - uses: ./
         id: version
       - name: Test outputs
-        run: |
+        uses: actions/setup-node@v6
+      - run: npm ci
+      - run: |
           export OUTPUT="${{ steps.version.outputs.version }}"
           echo "version: $OUTPUT must match .+-.+-.+"
           bash -c '[[ $OUTPUT =~ .+-.+-.+ ]]'
