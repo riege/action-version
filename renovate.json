@@ -11,9 +11,6 @@
   "platformAutomerge": true,
   "platformCommit": "enabled",
   "separateMinorPatch": true,
-  "lockFileMaintenance": {
-    "enabled": true
-  },
   "rangeStrategy": "update-lockfile",
   "packageRules": [
     {
