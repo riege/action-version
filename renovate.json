@@ -11,6 +11,9 @@
   "platformAutomerge": true,
   "platformCommit": "enabled",
   "separateMinorPatch": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "description": "Auto-merge some PRs",
