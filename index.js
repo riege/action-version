@@ -1,5 +1,5 @@
-const core = require('@actions/core');
-const version = require('./version');
+import * as core from '@actions/core'
+import * as version from './version.js'
 
 try {
     const outputs = version.get(process.env.GITHUB_REF, process.env.GITHUB_RUN_NUMBER, process.env.GITHUB_SHA);

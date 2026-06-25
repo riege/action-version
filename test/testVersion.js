@@ -1,6 +1,6 @@
 /*jshint loopfunc: true */
-let assert = require('assert');
-let version = require('../version');
+import * as assert from 'assert'
+import * as version from '../version.js'
 
 let testData = [
     ['refs/heads/main', '1', 'abcd', 'main-1-abcd', 'main', '1', 'abcd'],

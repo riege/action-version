@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A GitHub action to determine the version for build artifacts.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha",
     "build": "ncc build index.js -o dist"
