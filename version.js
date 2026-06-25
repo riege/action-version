@@ -1,4 +1,4 @@
-exports.get = function (ref, run, sha) {
+export function get(ref, run, sha) {
     if (ref.startsWith('refs/tags/')) {
         return fromTag(ref.replace(/^refs\/tags\//, ''));
     }
