@@ -16,8 +16,9 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm ci
-      # Since node_modules needs to be under version control, make sure the
-      # checked-in dependencies match those described in package.json
+      # Create distribution (dist/index.js)
+      - run: npm run build
+      # Since the distribution needs to be under version control, make sure it matches the source
       - run: git diff --exit-code
       - run: npm test
 
